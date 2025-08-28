@@ -1,5 +1,5 @@
 ---
-title: "npmダウンロード数で見るAIエージェントCLIツール動向（2025年6–8月）"
+title: "npmダウンロード数で見るAIエージェントCLIツール動向"
 emoji: "💡"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [zennfes2025free, claudecode, geminicli, codexcli, ai]
