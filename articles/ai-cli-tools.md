@@ -121,7 +121,7 @@ https://tanstack.com/stats/npm?packageGroups=%5B%7B%22packages%22%3A%5B%7B%22nam
 
 個人的にどのツールがどの機能を備えているのか把握するために、機能比較表を作成しました。自分の手 + DeepResearchを使用して表を作成しています。参考までに。
 
-![compare](/images/ai-cli-tools/comare2.png)
+![compare](/images/ai-cli-tools/compare2.png)
 
 <!-- https://x.com/oikon48/status/1961024064786759787 -->
 
