@@ -121,9 +121,9 @@ https://tanstack.com/stats/npm?packageGroups=%5B%7B%22packages%22%3A%5B%7B%22nam
 
 個人的にどのツールがどの機能を備えているのか把握するために、機能比較表を作成しました。自分の手 + DeepResearchを使用して表を作成しています。参考までに。
 
-<!-- ![compare](/images/ai-cli-tools/comare.png) -->
+![compare](/images/ai-cli-tools/comare2.png)
 
-https://x.com/oikon48/status/1961024064786759787
+<!-- https://x.com/oikon48/status/1961024064786759787 -->
 
 ## まとめとメモ
 
@@ -131,9 +131,9 @@ https://x.com/oikon48/status/1961024064786759787
 
 現状の構図は以下のとおりと理解しています。
 
-* Claude Code一強
+* Claude Codeがシェア１位
 * Gemini CLIが追随
-* Codexがトレンドイン
+* Codexがトレンドインして性能的に注目
 
 npmダウンロード数はあくまで導入の勢いを示す指標にすぎないため、参考程度に見ていただければと思います。
 
