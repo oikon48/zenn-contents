@@ -100,7 +100,7 @@ Single cohesive figure, 4K resolution minimum, professional presentation quality
 - 基本要件 (**User Input required**)
   - 目的: iOSアプリのモックアップ作成
   - 基本仕様: 4つのiPhone画面を横一列に配置
-  - 用途: ユーザージャーニーの完全な可視化
+  - 用途: User Journeyの可視化
   - 括弧 [ ] 内が入力プレースホルダー
 - ユーザーカスタマイズセクション (**User Input required**)
   - ユーザーが自由に変更できる変数部分
@@ -200,7 +200,7 @@ Target Audience: Young professionals and investors aged 25-45
 
 今回はモバイルアプリのUIモックアップで使えるアイデア出しのプロンプトを紹介しました。
 
-このまま実用的なUIコンポーネントまで落とし込めるかはユーザー次第なところはありますが、nano-bananaをアプリのデザインアイデア出しに利用できるのは個人的に良いと思います。
+このまま実用的なUIコンポーネントまで落とし込めるかは開発者次第なところはありますが、nano-bananaをアプリのデザインアイデア出しに利用できるのは個人的に良いと思います。
 
 nano-bananaはプロンプトを作り込むことで、ある程度一定の品質の画像生成ができることも今回分かりました。
 
