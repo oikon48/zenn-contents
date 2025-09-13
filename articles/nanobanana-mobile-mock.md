@@ -2,7 +2,7 @@
 title: "nano-bananaでモバイルアプリUIモックアップを作る"
 emoji: "🍌"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [nanobanana, gemini, 画像生成, 生成ai]
+topics: [nanobanana, gemini, 画像生成, 生成ai, zennfes2025ai]
 published: true
 ---
 
