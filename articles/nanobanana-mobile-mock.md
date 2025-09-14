@@ -212,6 +212,20 @@ nano-bananaはプロンプトを作り込むことで、ある程度一定の品
 
 https://x.com/oikon48
 
+## 追記
+
+:::message
+2025/9/14: 他の方に試していただいたので、参考までに掲載させていただきます。
+:::
+
+https://x.com/currypurin/status/1967045753240777210
+
+https://x.com/muscle_coding/status/1966889733688045978
+
+https://x.com/28_aidev/status/1966774739197984893
+
+https://x.com/Park_AI362489/status/1967119921554550861
+
 ## 参考文献
 
 https://aistudio.google.com/
