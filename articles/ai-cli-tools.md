@@ -1,7 +1,7 @@
 ---
 title: "npmダウンロード数で見るAIエージェントCLIツール動向"
 emoji: "💡"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [zennfes2025free, claudecode, geminicli, codexcli, ai]
 published: true
 published_at: 2025-08-29 07:02
