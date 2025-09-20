@@ -2,8 +2,9 @@
 title: "CodeRabbit CLIのレビューとClaude Codeとの統合"
 emoji: "🐇"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [coderabbit, claudecode, zennfes2025ai]
-published: false
+topics: [coderabbit, codereview, cli, claudecode, zennfes2025ai]
+published: true
+published_at: 2025-09-20 18:03
 ---
 
 Oikonです。
