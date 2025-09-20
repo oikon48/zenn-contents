@@ -33,7 +33,7 @@ https://x.com/oikon48/status/1968264364592623888
 
 ### PR ReviewをするCodeRabbit
 
-![alt text](/images/coderabbit-cli/coderabbit-github.png)
+![CodeRabbit AI commenting on a GitHub pull request](/images/coderabbit-cli/coderabbit-github.png)
 
 CodeRabbitは、GitHubのPR上で自動的にレビューをしてくれるAIツールとして知られています。
 
@@ -59,7 +59,7 @@ https://docs.coderabbit.ai/cli/overview
 
 ### 1. インストール
 
-![alt text](/images/coderabbit-cli/install.png)
+![Terminal screen showing CodeRabbit CLI installation process](/images/coderabbit-cli/install.png)
 
 ```bash
 curl -fsSL https://cli.coderabbit.ai/install.sh | sh
@@ -98,17 +98,17 @@ CodeRabbit CLIには、2つの使い方があります:
 
 git管理されているプロジェクトディレクトリで、`coderabbit`もしくは`cr`というコマンドを実行すると、以下の画像のような起動画面が立ち上がります。
 
-![alt text](/images/coderabbit-cli/coderabbit-cli.png)
+![CodeRabbit CLI startup screen showing project information](/images/coderabbit-cli/coderabbit-cli.png)
 
 画像からわかるように、現在のブランチやコード変更をgitから取得しています。
 
 起動画面から`Enter`を押すと以下の解析画面になります。
 
-![alt text](/images/coderabbit-cli/coderabbit-cli2.png)
+![CodeRabbit CLI code analysis in progress screen](/images/coderabbit-cli/coderabbit-cli2.png)
 
 解析画面では特にやることはありません。解析が終わるのを待ちます。
 
-![alt text](/images/coderabbit-cli/coderabbit-cli3.png)
+![CodeRabbit CLI review results with code comments and suggestions](/images/coderabbit-cli/coderabbit-cli3.png)
 
 コードの解析が全て完了するとレビュー結果を出してくれます。上記の画像のように、問題のあるファイル名とレビュー結果が表示されます。
 
@@ -128,7 +128,7 @@ git管理されているプロジェクトディレクトリで、`coderabbit`�
 
 CodeRabbit CLIは、他社CLIツールとの統合を前提に作成されています。
 
-![alt text](/images/coderabbit-cli/claude-rabbit-0.png)
+![Works with integration logos: Claude, Codex, Gemini, and Cursor](/images/coderabbit-cli/claude-rabbit-0.png)
 
 - Claude Code
 - Codex CLI
@@ -144,7 +144,7 @@ CodeRabbit CLIは、他社AIツールと統合するためにヘッドレスモ�
 
 ツールのAIエージェントに、これらのモードオプションをつけたCodeRabbit CLIの呼び出しを実行させることで、**AIエージェントのコンテキストにレビュー内容を直接反映させることが可能になります**。
 
-![alt text](/images/coderabbit-cli/integ.png)
+![CodeRabbit CLI integration workflow diagram showing code review process](/images/coderabbit-cli/integ.png)
 
 たとえば以下のようなClaude Codeのプロンプトとして渡すような使い方ができます。
 
@@ -154,7 +154,7 @@ CodeRabbit CLIは、他社AIツールと統合するためにヘッドレスモ�
 
 Claude CodeのようなBackground Taskが使用できるAIツールであれば、裏でCodeRabbit CLIにレビューをさせつつ実装を進めて、CodeRabbit CLIのレビュー結果を即座にコードベースに反映することが可能になります。
 
-![alt text](/images/coderabbit-cli/claude-rabbit.png)
+![Claude Code running CodeRabbit CLI as a background task](/images/coderabbit-cli/claude-rabbit.png)
 
 上記の画像では、Claude CodeのBackground TaskとしてCodeRabbit CLIが実行されていることがわかります。Claude Code以外のAIツールでも、プロンプトでCodeRabbit CLIをヘッドレスで呼び出すように指示すれば同じようなことが可能です。
 
@@ -197,17 +197,17 @@ coderabbit --plain
 
 他社CLIツールとの統合は、CodeRabbit CLIのヘッドレスモードで簡単に行えるのですが、CodeRabbitのレビュー終了タイミングが読めないため、Claude CodeなどのAIエージェントの実装と同時に走らせる難しさはかなり感じました。ただCodeRabbit CLI自体はBetaリリースとも書かれているので、今後はシームレスに他AIツールとの統合ができることを期待します。
 
-![alt text](/images/coderabbit-cli/beta.png)
+![CodeRabbit CLI documentation page showing Beta version notice](/images/coderabbit-cli/beta.png)
 
 ### レートリミット
 
 CodeRabbit CLIはレートリミットが存在します。
 
-筆者はProプラン($12)を使用しているのですが、頻繁に使用していると結構早めにレートリミットに遭遇しました。
+筆者はLiteプラン($12/Month)を使用しているのですが、頻繁に使用していると結構早めにレートリミットに遭遇しました。
 
 レートリミットがいつ解除されるかは、`coderabbit`を起動してみると分かります。
 
-![alt text](/images/coderabbit-cli/coderabbit-cli4.png)
+![CodeRabbit CLI rate limit exceeded warning screen](/images/coderabbit-cli/coderabbit-cli4.png)
 
 上記の画像のようにレートリミットが来ても、数分程度で解除されます(画像は2分7秒)。一番長い時で8分ほどでした。
 
@@ -223,7 +223,7 @@ CodeRabbit CLIの特徴は、Claude Code, Cursorといった他社AIツールと
 
 CodeRabbitは、ローカルからリモートまでレビュープロセスの中に組み込めるように意識しているようなので、CodeRabbitを使ったことがある人は利用してみるといいと思います。CodeRabbit CLIは、まだベータ版のため今後はさらに使いやすくなると思います。
 
-![alt text](/images/coderabbit-cli/integ2.png)
+![CodeRabbit integration workflow: CLI to CI/CD to Pull Request reviews](/images/coderabbit-cli/integ2.png)
 
 ## Xフォローしてくれると嬉しいです
 
