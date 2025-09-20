@@ -158,6 +158,10 @@ Claude CodeのようなBackground Taskが使用できるAIツールであれば�
 
 上記の画像では、Claude CodeのBackground TaskとしてCodeRabbit CLIが実行されていることがわかります。Claude Code以外のAIツールでも、プロンプトでCodeRabbit CLIをヘッドレスで呼び出すように指示すれば同じようなことが可能です。
 
+CLIツールとの統合は以下の動画がわかりやすいので、よければ参考にしてみてください。
+
+https://youtu.be/IqBKf4u5MtA?si=VQEauThlqCOk9OyN
+
 ### 実際にCodeRabbit CLIを使用してみた所感
 
 CodeRabbit CLIを実際にAIツールと併用してみました。筆者はClaude Codeをメインに使用しているのと、CodeRabbitの公式動画もClaude Codeとの統合を紹介しているため、Claude Codeでの利用です。
