@@ -3,11 +3,12 @@ title: "Claude Code 2.0.0 のメジャーアップデートについて"
 emoji: "💫"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [claudecode, anthropic, claude, ai, zennfes2025ai]
-published: false
+published: true
+published_at: 2025-10-04 07:02
 ---
 
 :::message
-10/3時点のClaude Code v2.0.0 - v2.0.5の内容です
+2025年10月3日時点のClaude Code v2.0.0 - v2.0.5の内容です
 :::
 
 Oikonです。普段はAIツール、特にClaude Codeで遊んでいます。
@@ -45,7 +46,7 @@ https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
 
 ![VSCode拡張のモード](https://pbs.twimg.com/media/G2D0YRRbMAA6F4f.jpg)
 
-VSCode拡張が大きく刷新され、CLIの延長線上からCursorやCodexのようなチャットウィンドウ形式になりました。[VSCodeのマーケットプラレスからインストール](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)できます。もちろんVSCodeのフォークであるCursorなどでもインストールすることができます。
+VSCode拡張が大きく刷新され、CLIの延長線上からCursorやCodexのようなチャットウィンドウ形式になりました。[VSCodeのマーケットプレイスからインストール](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)できます。もちろんVSCodeのフォークであるCursorなどでもインストールすることができます。
 
 **リリース直後の2.0.0では、日本語変換時にEnterを押すとそのままチャットが送信されてしまう不具合がありましたが、2.0.5時点では解消されています**。
 
@@ -80,11 +81,13 @@ Ask before editsの場合、ファイル編集をする場合に確認を行い�
 
 注意点としては、Claude Code CLIは`@`でSubagentも指定できましたが、**Claude Code VSCodeはファイル選択のみしか2.0.0の時点ではできず、Subagentの直接指定はできませんでした**。
 
-## `/rewind`コマンド: 会話の巻き戻し
+## `/rewind`コマンド: 会話の巻き戻し（Checkpoints機能）
 
 ![/rewindの例](https://pbs.twimg.com/media/G2D3Vc2awAAmInF.jpg)
 
-巻き戻しが可能な`/rewind`コマンドが追加されました。Escを2回押すことでも起動します。
+**Checkpoints**は最もリクエストが多かった機能の1つで、`/rewind`コマンドとして実装されました。Escを2回押すことでも起動します。
+
+この機能により、Claudeが重要な編集を行う前に自動的にチェックポイントが保存され、いつでも以前の状態にロールバックすることができます。
 
 会話の履歴を表示して、選択した位置に戻ることができます。戻る際のオプションは３つあります：
 
@@ -162,7 +165,7 @@ https://docs.claude.com/en/docs/claude-code/cli-reference#agents-flag-format
 - Opus: Opus 4.1
 - Sonnet (1M context) (解放されているMax 20xユーザーのみ)
 
-Opus-Plan mode（PlanモードはOpus、実行はSonnet）はなくなったようです。
+なお、以前あったOpus-Plan mode（PlanモードはOpus、実行はSonnet）は2.0.0では削除されています。
 
 ## CONFIGの内容の変更
 
