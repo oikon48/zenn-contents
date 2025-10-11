@@ -1,8 +1,8 @@
 ---
-title: "Claude・Codex・KombaiのFigma to Codeの比較"
+title: "Claude・Codex・Kombaiを使ったFigma to Codeの比較"
 emoji: "🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [figma, codex, frontend, claudecode, kombai]
+topics: [figma, codexcli, frontend, claudecode, kombai]
 published: true
 published_at: 2025-10-12 07:02
 ---
@@ -198,5 +198,5 @@ Xでも情報発信しているので、フォローしていただけると励�
 
 ## 参考文献
 
-- https://www.builder.io/blog/figma-mcp-server
-- https://kombai.com
+https://www.builder.io/blog/figma-mcp-server
+https://kombai.com
