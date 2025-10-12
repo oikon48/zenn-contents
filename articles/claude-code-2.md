@@ -2,7 +2,7 @@
 title: "Claude Code 2.0.0 のメジャーアップデートについて"
 emoji: "💫"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [claudecode, anthropic, claude, ai, zennfes2025ai]
+topics: [ai, claudecode, anthropic, claude, zennfes2025ai]
 published: true
 published_at: 2025-10-04 07:02
 ---
