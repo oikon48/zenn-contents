@@ -2,7 +2,7 @@
 title: "Claude・Codex・Kombaiを使ったFigma to Codeの比較"
 emoji: "🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [figma, codexcli, frontend, claudecode, kombai]
+topics: [figma, codexcli, claudecode, kombai, zennfes2025ai]
 published: true
 published_at: 2025-10-12 07:02
 ---
