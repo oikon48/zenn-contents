@@ -77,11 +77,11 @@ https://chatgpt.com/codex
 
 一度Webで設定をしたら、ChatGPTのモバイルアプリからCodex Cloudを起動します。サイドバーを開けばすぐに見つかると思います。
 
-![chatgpt-code](/images/dev-from-mobile/chatgpt-codex.png =400x)
+![chatgpt-code](/images/dev-from-mobile/chatgpt-code.png =400x)
 
 Codex Cloudの特徴として、一つのタスクに対して4つまで並列で変更を作成することができます。そのうちの一つをGitHubのPRとして作成できます。
 
-![chatgpt-code2](/images/dev-from-mobile/chatgpt-codex2.png =400x)
+![chatgpt-code2](/images/dev-from-mobile/chatgpt-code2.png =400x)
 
 両方使ってみた個人的な感想ですが、**Codex Cloudの方が実装内容が良いことが多かったです**。Claude Code GitHub Actionsは`@`メンションで簡単にGitHub上でやり取り・変更作成できる点が良かったです。
 
