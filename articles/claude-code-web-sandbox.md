@@ -311,6 +311,15 @@ https://docs.claude.com/en/docs/claude-code/output-styles
 
 個人的に好きな機能なので掲載しました。
 
+:::message
+2025-11-05 追記
+
+output-styleのdeprecateがコミュニティの意見により撤回されました！output-styleは2.0.33時点で使用可能です
+
+https://x.com/oikon48/status/1985516353651163439
+
+:::
+
 ## まとめ
 
 今回は、Claude Code on the WebのSandbox環境について調査しました
