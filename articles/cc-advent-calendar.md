@@ -2,8 +2,9 @@
 title: "Claude Codeアドベントカレンダー: 24 Tipsまとめ"
 emoji: "💫"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [claudecode, claude, llm, anthropic]
-published: false
+topics: [claudecode, claude, ai, anthropic]
+published: true
+published_at: 2025-12-26 07:03
 ---
 
 ## TL;DR
