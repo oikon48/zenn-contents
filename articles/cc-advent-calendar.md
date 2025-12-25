@@ -1,5 +1,5 @@
 ---
-title: "Claude Codeアドベントカレンダー: 24 Tips"
+title: "Claude Codeアドベントカレンダー: 24 Tipsまとめ"
 emoji: "💫"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [claudecode, claude, llm, anthropic]
@@ -8,27 +8,9 @@ published: false
 
 ## TL;DR
 
-- Claude Codeアドベントカレンダーを、12/1~12/24で実施
+- Claude Codeアドベントカレンダーを12/1~12/24で単独実施
 - 24個のClaude CodeのTipsをX(Twitter)で共有
 - [#claude_code_advent_calendar](https://x.com/hashtag/claude_code_advent_calendar?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2003798309354549671%7Ctwgr%5Eff6fa3222f1582c13d303319a3f55712934a2390%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fembed.zenn.studio%2Ftweetzenn-embedded__d3110cd769602&src=hashtag_click)でポストが見れる
-
-## 背景
-
-12月に入ると技術記事の**アドベントカレンダー**を目にするようになります。さまざまな技術トピックを12月1日〜12月24日まで（25日までのケースもある）、エンジニア達が交代で技術記事を書いていきます。
-
-そんな中でAntrhopicの方がアドベントカレンダーを始めているのを目にしました。
-
-https://x.com/adocomplete/status/1995523532663755010?s=20
-
-このポストを見て、自分も普段Claude Codeについて発信しているのでやってみようと思ったのがきっかけです。
-
-もともと自分の中で検証が足りていないと感じていた機能を、調査できる良い機会だと思いました。
-
-## Claude Code アドベントカレンダー
-
-Day1 ~ Day24までの内容の再掲と、それぞれについて補足をしていきます。
-
-おそらく1つくらいは参考になる話もあると思うので、良かったら眺めてみてください。
 
 | Day | トピック | Day | トピック |
 |:---:|:--------|:---:|:--------|
@@ -44,6 +26,41 @@ Day1 ~ Day24までの内容の再掲と、それぞれについて補足をし�
 | [Day10](#【day10】-project-ルール-clauderules) | Project ルール | [Day22](#【day22】-claude-code-action--agent-skills) | Code Action + Agent Skills |
 | [Day11](#【day11】-claudemdのロード) | CLAUDE.mdのロード | [Day23](#【day23】-claude-codeの並列実行) | Claude Codeの並列実行 |
 | [Day12](#【day12】-rm--rf-の悲劇を防ぐ) | `rm -rf`の悲劇を防ぐ | [Day24](#【day24】-claude-code-ecosystem) | Claude Code Ecosystem |
+
+## 背景
+
+12月に入ると技術記事の**アドベントカレンダー**を目にするようになります。さまざまな技術トピックを12月1日〜12月24日まで（25日までのケースもある）、エンジニア達が交代で技術記事を書いていきます。
+
+そんな中でAnthropicの方が、Xでアドベントカレンダーを始めているのを目にしました。
+
+https://x.com/adocomplete/status/1995523532663755010?s=20
+
+このポストを見て、自分も普段Claude Codeについて発信しているのでやってみようと思ったのがきっかけです。
+
+もともと自分の中で検証が足りていないと感じていた機能を、調査できる良い機会だと思いました。
+
+## Claude Code アドベントカレンダー
+
+Day1 ~ Day24までの内容の再掲と、それぞれについて補足をしていきます。
+
+おそらく1つくらいは参考になる話もあると思うので、良かったら眺めてみてください。
+
+:::details トピック一覧(再掲)
+| Day | トピック | Day | トピック |
+|:---:|:--------|:---:|:--------|
+| [Day1](#【day1】-opus-45-移行ガイド) | Opus 4.5 移行ガイド | [Day13](#【day13】-sandbox-でrm--rfを予防) | Sandboxで予防 |
+| [Day2](#【day2】-claude-code-statusline) | Claude Code statusline | [Day14](#【day14】-claude-hooks-でフィルタリング) | Hooks でフィルタリング |
+| [Day3](#【day3】--でon-the-webに送る) | `&`でon the Webに送る | [Day15](#【day15】-claude-hooks-でフォーマット) | Hooks でフォーマット |
+| [Day4](#【day4】-thinking-キーワード) | Thinking キーワード | [Day16](#【day16】-ctrl--g-でエディタ編集) | Ctrl + G でエディタ編集 |
+| [Day5](#【day5】-claude-code-の-agentsmd-対応) | AGENTS.md 対応 | [Day17](#【day17】-planモード) | Planモード |
+| [Day6](#【day6】-claude-code-on-the-web-のsetup) | on the Web のSetup | [Day18](#【day18】-claude-in-chrome-でgif作成) | Claude in Chrome でGIF作成 |
+| [Day7](#【day7】-mcpツールのコンテキスト) | MCPツールのコンテキスト | [Day19](#【day19】-agent-skillsベストプラクティス) | Agent Skillsベストプラクティス |
+| [Day8](#【day8】-claude-skillsを作る-skill-creator) | Skill Creator | [Day20](#【day20】-auto-compact-bufferサイズ) | Auto-compact Bufferサイズ |
+| [Day9](#【day9】-claude-skills--subagents) | Skills + Subagents | [Day21](#【day21】-非同期-subagents) | 非同期 Subagents |
+| [Day10](#【day10】-project-ルール-clauderules) | Project ルール | [Day22](#【day22】-claude-code-action--agent-skills) | Code Action + Agent Skills |
+| [Day11](#【day11】-claudemdのロード) | CLAUDE.mdのロード | [Day23](#【day23】-claude-codeの並列実行) | Claude Codeの並列実行 |
+| [Day12](#【day12】-rm--rf-の悲劇を防ぐ) | `rm -rf`の悲劇を防ぐ | [Day24](#【day24】-claude-code-ecosystem) | Claude Code Ecosystem |
+:::
 
 ハッシュタグ [#claude_code_advent_calendar](https://x.com/hashtag/claude_code_advent_calendar?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2003798309354549671%7Ctwgr%5Eff6fa3222f1582c13d303319a3f55712934a2390%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fembed.zenn.studio%2Ftweetzenn-embedded__d3110cd769602&src=hashtag_click)で、実際のポストも確認できます。
 
@@ -68,7 +85,7 @@ Opus 4.5 を使う際のモデルの傾向が見えてきて、プロンプト�
 
 ![](https://pbs.twimg.com/media/G7EhDjGagAArLQM?format=jpg&name=4096x4096)
 
-Opus 4.5はツールの利用に積極的になった分、ツールを呼ばなくても良いケースも呼んでコンテキストが埋まったりするので、動きをしっかり見ると良い。
+Opus 4.5はツールの利用に積極的になった分、ツールを呼ばなくても良いケースでも呼び出してコンテキストが埋まることがあるので、動きをしっかり見ると良い。
 :::
 
 Anthropicの公式リポジトリの中に、**Claudeのモデルを移行するためのSkills**があったので共有しました。Sonnet 4.0, Sonnet 4.5, Opus 4.1で使用していたプロンプトをOpus 4.5のためにアップデートするSkillsです。
@@ -101,7 +118,7 @@ Claude Codeのstatuslineは、知らない人も多いですが隠れた良い�
 
 今までstatuslineを使ったことがない人は、GitHubとかに転がっている設定を使っても良いですが、[ryoppippi](https://x.com/ryoppippi)氏のccusageの設定を試してみると良いと思います。
 
-```md:~/.claude/settings.json
+```json:~/.claude/settings.json
 {
   "statusLine": {
     "type": "command",
@@ -170,9 +187,9 @@ https://x.com/oikon48/status/1996898343784763479
 :::message
 **【Day5】 Claude Code の AGENTS.md 対応**
 
-Claude CodeはAGENTS .mdを公式サポートしていないが回避策は存在する。
+Claude CodeはAGENTS.mdを公式サポートしていないが回避策は存在する。
 
-CLAUDE .mdの中で、`@ AGENTS .md`をImportすることでメモリファイル参照してくれるようになる。
+CLAUDE.mdの中で、`@AGENTS.md`をImportすることでメモリファイル参照してくれるようになる。
 Importされたかは`/memory`コマンドで確認可能。
 
 ![](https://pbs.twimg.com/media/G7ZjsvBa4AAIYmv?format=jpg&name=medium)
@@ -182,7 +199,7 @@ Claude Codeは**AGENTS.mdをサポートしていません**。これはGitHub i
 
 https://github.com/anthropics/claude-code/issues/6235
 
-Anthropicの[公式ドキュメント](https://code.claude.com/docs/en/claude-code-on-the-web#best-practices)には一応解決法が書いてあり、CALUDE.md内でAGENTS.mdをImportするように書かれています
+Anthropicの[公式ドキュメント](https://code.claude.com/docs/en/claude-code-on-the-web#best-practices)には一応解決法が書いてあり、CLAUDE.md内でAGENTS.mdをImportするように書かれています
 
 他の方法としては、`ln -s AGENTS.md CLAUDE.md`でシンボリックリンクを設定する回避策もあります。
 
@@ -197,7 +214,7 @@ https://x.com/oikon48/status/1997261626517692850
 
 CC on the Webには`CLAUDE_CODE_REMOTE`という環境変数が用意されており、リモート環境か判定できる。これとSessionStart Hooks利用することで、リモート環境限定のSetupが可能。
 
-実は session-start-hook がリモートのon the Web 環境にはグローバル設定で用意されているため、これを利用することでリモート環境限定で起動するHooksを作成も簡単にお願いできる。
+実は session-start-hook がリモートのon the Web 環境にはグローバル設定で用意されているため、これを利用することでリモート環境限定で起動するHooksの作成を簡単にお願いできる。
 
 ![](https://pbs.twimg.com/media/G7ew2JZa4AAbPBx?format=jpg&name=medium)
 :::
@@ -360,7 +377,7 @@ Claude Codeユーザーが最近も増えているので注意喚起。
 
 回避する方法は色々あるが、まずは settings.json に`permissions.deny` の設定する。ここで `rm` や DB操作のコマンド権限を否定することで、Claude Codeが誤って消してはいけないファイルやディレクトリを削除する悲劇をある程度回避できる。
 
-`permissions.ask` でClaudeが確認を取ってから実行する柔軟な設定もできるので、こちらで`rm`を実行する時だけ確認することもできる。`--dangerously-skip-permissions`オプジョンがついていても、pemissions設定が優先される。
+`permissions.ask` でClaudeが確認を取ってから実行する柔軟な設定もできるので、こちらで`rm`を実行する時だけ確認することもできる。`--dangerously-skip-permissions`オプションがついていても、permissions設定が優先される。
 
 ![](https://pbs.twimg.com/media/G79okHeacAAda1o?format=jpg&name=medium)
 :::
@@ -389,7 +406,7 @@ Sandbox設定と【Day12】の permissions 設定を組み合わせることで�
 ![](/images/cc-advent-calendar/day13.gif)
 :::
 
-【Day12】の`rm -rf`コマンド繋がりです。現在は作業ディレクトリ意外に変更を加えないようSandboxを使うことをおすすめします。
+【Day12】の`rm -rf`コマンド繋がりです。現在は作業ディレクトリ以外に変更を加えないようSandboxを使うことをおすすめします。
 
 他にもHooksなどでコマンド実行前に止めることも可能です。いくつかの防御策を講じることで、ガードレールをより強固にできます。
 
@@ -404,7 +421,7 @@ https://x.com/oikon48/status/2000164839503917319
 
 Claude CodeのHooksを活用すれば、AIエージェントに渡す情報のフィルタリングが可能。UserPromptSubmit や PreToolUse を使うのが効果的。
 
-例えば、API キーがプロンプトやファイルに含まれているケースでは、AIエージェントに読み込まれるまでにHooksでブロックすることが可能。センセティブ情報のフィルタリングの使い方ができる。
+例えば、API キーがプロンプトやファイルに含まれているケースでは、AIエージェントに読み込まれるまでにHooksでブロックすることが可能。センシティブ情報のフィルタリングの使い方ができる。
 
 ![](/images/cc-advent-calendar/day14.gif)
 :::
@@ -522,7 +539,7 @@ Agent Skillsがオープンスタンダードになった。Claude以外のCurso
 
 Agent Skillsを作る際には、Claude Skillsベストプラクティスが参考になる↓
 
-・SKILL .mdは500行以下
+・SKILL.mdは500行以下
 ・例は具体的に
 ・ファイル参照は深さ１階層まで
 ・段階的開示を適切に設定
@@ -555,7 +572,7 @@ https://x.com/oikon48/status/2002334161814573399
 :::message
 **【Day20】 Auto-compact Bufferサイズ**
 
-Claude CodeはAuto-comapactを有効にした時、会話を自動圧縮をするためのバッファ(Auto-compact Buffer)が存在する。
+Claude CodeはAuto-compactを有効にした時、会話を自動圧縮をするためのバッファ(Auto-compact Buffer)が存在する。
 
 このAuto-compact Bufferは、環境変数CLAUDE_CODE_MAX_OUTPUT_TOKENS で変動する。デフォルトは32k であり、200kのコンテキストウィンドウの22.5%を占有する。モデル概要をみると64k が最大値だが、その場合コンテキストウィンドウの40%近くがバッファで占有されることを理解するべきである。
 
