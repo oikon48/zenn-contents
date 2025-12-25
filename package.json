@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/oikon48/zenn-contents#readme",
   "dependencies": {
-    "zenn-cli": "^0.2.3"
+    "zenn-cli": "^0.2.11"
   }
 }
