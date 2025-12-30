@@ -1,5 +1,5 @@
 ---
-title: "Claude CodeのCHANGELOGを全て追ってきて思うこと"
+title: "Claude Codeの全てのCHANGELOGを追ってきて"
 emoji: "💫"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [claudecode, claude, anthropic, ai]
