@@ -3,7 +3,8 @@ title: "Claude CodeのCHANGELOGを全て追ってきて思うこと"
 emoji: "💫"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [claudecode, claude, anthropic, ai]
-published: false
+published: true
+published_at: 2025-12-31 07:02
 ---
 
 Oikonです。普段はClaude Codeの話を[X(Twitter)](https://x.com/oikon48)でしています。
