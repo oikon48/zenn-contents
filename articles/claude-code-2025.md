@@ -9,7 +9,7 @@ published_at: 2025-12-31 07:02
 
 Oikonです。普段はClaude Codeの話を[X(Twitter)](https://x.com/oikon48)でしています。
 
-激動の2025年がもうすぐ終わるということで、CLaude Codeについてまとめようと思いました。個人的に2025年はAIエージェントが大きく飛躍した年であり、**私にとってはClaude Codeの年でした**。
+激動の2025年がもうすぐ終わるということで、Claude Codeについてまとめようと思いました。個人的に2025年はAIエージェントが大きく飛躍した年であり、**私にとってはClaude Codeの年でした**。
 
 [Claude CodeのCHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)の更新自体は合計176回ありましたが、少なくともv1.0.xからは全て確認・検証をしています。
 
