@@ -54,7 +54,7 @@ https://x.com/oikon48/status/1919078662323745066?s=20
 
 ## Claude Codeの正式リリース
 
-2025年5月25日にAnthropicからClaude 4の発表がありました。当時の様子について書いたZennの記事があるので、良かったら読んでみてください。
+2025年5月23日にAnthropicからClaude 4の発表がありました。当時の様子について書いたZennの記事があるので、良かったら読んでみてください。
 
 https://zenn.dev/oikon/articles/adac12ea9e839b
 
