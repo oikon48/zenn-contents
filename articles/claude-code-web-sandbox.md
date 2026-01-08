@@ -20,6 +20,13 @@ published_at: "2025-11-01 18:01"
 Claude Code on the Webでghコマンドを使う:
 <https://zenn.dev/oikon/articles/claude-code-web-gh-cli>
 
+変更概要:
+・Claude Code 2.0.25 -> 2.0.59
+・環境基本スペック更新
+・Skills が allow permissionに追加
+・sonnet 4.5 -> opus 4.5
+・ghの解禁。システムプロンプト変更
+
 11月の仕様が気になる方は、私の[zennのgithubリポジトリ](https://github.com/oikon48/zenn-contents/blob/main/articles/claude-code-web-sandbox.md)の変更履歴をご確認ください。
 
 :::
