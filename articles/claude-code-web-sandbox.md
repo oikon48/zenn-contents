@@ -13,6 +13,17 @@ published_at: "2025-11-01 18:01"
 - すでにSandboxの挙動が変わっているのを確認しています。実際の挙動は手元の環境で試してみてください
 :::
 
+:::message alert
+**更新: 2026年1月8日**
+以下の記事を書くにあたり、この記事のデータをUpdateしました
+
+Claude Code on the Webでghコマンドを使う:
+<https://zenn.dev/oikon/articles/claude-code-web-gh-cli>
+
+11月の仕様が気になる方は、私の[zennのgithubリポジトリ](https://github.com/oikon48/zenn-contents/blob/main/articles/claude-code-web-sandbox.md)の変更履歴をご確認ください。
+
+:::
+
 Oikonです。普段はAIツール、特にClaude Codeで遊んでいます。
 
 Claude Codeには**Claude Code on the Web**という、ブラウザ上でClaude Codeを実行できる環境があります。手元にPCがなくてもブラウザさえあれば開発できます。
@@ -45,9 +56,9 @@ Claude Code on the Webは**gVisorベースのコンテナ環境**で実行され
 |-----|------|
 | **OS** | Ubuntu 24.04.3 LTS |
 | **コンテナランタイム** | gVisor (runsc) |
-| **CPU** | 4コア |
-| **メモリ** | 8GB上限 |
-| **ディスク** | 9.8GB |
+| **CPU** | 16コア |
+| **メモリ** | 21GB |
+| **ディスク** | 30GB |
 | **ファイルシステム** | 9p protocol |
 | **ネットワーク** | プロキシ経由（JWT認証） |
 
@@ -93,11 +104,14 @@ Claude Code on the WebではSandbox内の`~/.claude/settings.json`にClaude Code
         ]
       }
     ]
+  },
+  "permissions": {
+    "allow": ["Skill"]
   }
 }
 ```
 
-上記を見て分かる通り、Stop Hooksのみが設定されています。`stop-hook-git-check.sh`の中身が気になる方用にこちらに添付しておきます。
+上記を見て分かる通り、Stop Hooksと`permissions`（Skillの許可）が設定されています。`stop-hook-git-check.sh`の中身が気になる方用にこちらに添付しておきます。
 
 :::details　stop-hook-git-check.sh
 
@@ -175,10 +189,10 @@ claude \
   --replay-user-messages \
   --input-format=stream-json \
   --debug-to-stderr \
-  --allowed-tools Task,Bash,Glob,Grep,ExitPlanMode,Read,Edit,MultiEdit,Write,NotebookEdit,WebFetch,TodoWrite,WebSearch,BashOutput,KillBash,Tmux,mcp__codesign__sign_file \
+  --allowed-tools Task,Bash,Glob,Grep,Read,Edit,MultiEdit,Write,NotebookEdit,WebFetch,TodoWrite,WebSearch,BashOutput,KillBash,Tmux,mcp__codesign__sign_file \
   --disallowed-tools Bash(gh:*) \
   --append-system-prompt "You are Claude, ..." \
-  --model claude-sonnet-4-5-20250929 \
+  --model claude-opus-4-5-20251101 \
   --add-dir /home/user/repo_name \
   --sdk-url wss://api.anthropic.com/v1/session_ingress/ws/session_id \
   --resume=https://api.anthropic.com/v1/session_ingress/session/session_id \
@@ -187,12 +201,18 @@ claude \
 
 `--varbose`オプションが指定されているため、起動時オプションは`grep -A 5 "Executing Claude Code" /tmp/claude-code.log`などをClaudeに実行させることで取得できました。
 
-上記からわかるようにモデルは`Sonnet 4.5`に固定されています。settings.jsonで"model"を指定しても変わりません。
+上記からわかるようにモデルは`Opus 4.5`に固定されています。settings.jsonで"model"を指定しても変わりません。
 
 起動時オプション:
 https://docs.claude.com/en/docs/claude-code/cli-reference#cli-flags
 
-興味深いのは、`gh`コマンドが禁止ツールに入っていることです。これは`--append-system-prompt`でも厳重に指定されていました。
+:::message
+
+`gh`コマンドは以前は禁止ツールに入っていましたが、現在は禁止解除されています。詳しくは以下の記事に記載しています。
+
+https://zenn.dev/oikon/articles/claude-code-web-gh-cli
+
+:::
 
 :::details --append-system-promptの中身
 
@@ -235,10 +255,12 @@ Follow these practices for git:
 - Prefer fetching specific branches: git fetch origin <branch-name>
 - If network failures occur, retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s)
 - For pulls use: git pull origin <branch-name>
-
-The GitHub CLI (`gh`) is not available in this environment. For GitHub issues ask the user to provide the necessary information directly.
-
 ```
+
+以前あった`gh`禁止についてのシステムプロンプトは削除されました。
+
+> The GitHub CLI (`gh`) is not available in this environment. For GitHub issues ask the user to provide the necessary information directly.
+
 
 :::
 
@@ -298,7 +320,7 @@ Subagentsは**使えます**。上記の画像ではデフォルトの@agent-Exp
 
 ![skills](/images/cc-web-sandbox/skills.png)
 
-Skillsは**使えません**。これも`canUseTool`が使用できない設定のためです。ただSkillsの中身はMarkdownなので、Claudeが勝手に読み取って使ってくれることが多いです。スラッシュコマンドと同じような挙動をすると思って結構です。
+Skillsは**使えます**。グローバル設定の`permissions`に`"allow": ["Skill"]`が追加されました。
 
 ### output-style
 
