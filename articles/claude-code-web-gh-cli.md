@@ -14,7 +14,7 @@ Oikonです。普段はAIツール、特にClaude Codeで遊んでいます。
 
 以前、[Claude Code on the Webの仕様を徹底解剖](https://zenn.dev/oikon/articles/claude-code-web-sandbox)という記事を書きました。その中で`gh`コマンドが禁止されていることを紹介しましたが、最近の仕様変更で`gh`が`disallowed_tools`から削除され、使えるようになりました。
 
-今回は、Claude Code on the Webでghを使えるようにする設定を紹介します。
+今回は、Claude Code on the Webで`gh`を使えるようにする設定を紹介します。
 
 ## Claude Code on the Webとは
 
@@ -32,7 +32,7 @@ https://x.com/oikon48/status/1996177293551747577?s=20
 
 ## `gh`コマンドの禁止解除
 
-以前のClaude Code on the Webでは、ghコマンドが明確に禁止されていました。起動時のオプションで`--disallowed-tools Bash(gh:*)`が設定されており、システムプロンプトにも以下の記述がありました：
+以前のClaude Code on the Webでは、`gh`コマンドが明確に禁止されていました。起動時のオプションで`--disallowed-tools Bash(gh:*)`が設定されており、システムプロンプトにも以下の記述がありました：
 
 > The GitHub CLI (`gh`) is not available in this environment.
 
@@ -42,16 +42,16 @@ https://x.com/oikon48/status/1996177293551747577?s=20
 
 ![startup.jsonの差分](https://pbs.twimg.com/media/G-HBEEraIAAxYwp?format=png&name=small)
 
-上記の画像は`data/startup.json`の差分です。`"disallowed_tools": ["Bash(gh:*)"]`が削除されているのがわかります。これにより、**ghコマンド自体は禁止ではなくなりました**。ただし、デフォルトではghはインストールされていないため、そのままでは使えません。
+上記の画像は`data/startup.json`の差分です。`"disallowed_tools": ["Bash(gh:*)"]`が削除されているのがわかります。これにより、**ghコマンド自体は禁止ではなくなりました**。ただし、デフォルトでは`gh`はインストールされていないため、そのままでは使えません。
 
 ![has gh](/images/claude-code-web-gh-cli/no-gh.png)
 
-## ghを使うための条件
+## `gh`を使うための条件
 
-ghを使うには以下の2つが必要です：
+`gh`を使うには以下の2つが必要です：
 
 1. カスタム環境でGITHUB_TOKENを設定する
-2. ghをインストールする
+2. `gh`をインストールする
 
 ### カスタム環境の設定
 
@@ -59,9 +59,9 @@ Claude Code on the Webでは、カスタム環境を使って環境変数を設�
 
 ![カスタム環境の設定画面](/images/claude-code-web-gh-cli/custom-env-settings.png)
 
-カスタム環境で.env形式の`GITHUB_TOKEN`を設定することで、ghコマンドの認証に必要なトークンを渡すことができます。ネットワークアクセスは"Full"ならば特に設定の必要はなし、"カスタム"であればインストール元（今回のScriptの場合は、`release-assets.githubusercontent.com`）を追加します。
+カスタム環境で.env形式の`GITHUB_TOKEN`を設定することで、`gh`コマンドの認証に必要なトークンを渡すことができます。ネットワークアクセスは"Full"ならば特に設定の必要はなし、"カスタム"であればインストール元（今回のScriptの場合は、`release-assets.githubusercontent.com`）を追加します。
 
-### sessionStartHooksでghをインストール
+### sessionStartHooksで`gh`をインストール
 
 GITHUB_TOKENが設定されている環境で`gh`コマンドをインストールすれば、`gh`が使えます。Claude Codeに明示的に頼むこともできますが、sessionStartHooksを使えば自動でインストールできます。
 
@@ -200,7 +200,7 @@ exit 0
 ```
 
 
-`CLAUDE_CODE_REMOTE`はClaude Code on the Webの環境でのみ`true`に設定される環境変数です。これにより、**ローカル環境では実行をスキップし、on the Web環境でのみghをインストール**します。今回は`gh`コマンドのインストールに使いましたが、他のリモートのみで実行したいケースでも使えると思います。
+`CLAUDE_CODE_REMOTE`はClaude Code on the Webの環境でのみ`true`に設定される環境変数です。これにより、**ローカル環境では実行をスキップし、on the Web環境でのみ`gh`をインストール**します。今回は`gh`コマンドのインストールに使いましたが、他のリモートのみで実行したいケースでも使えると思います。
 
 ```bash
 if [ "$CLAUDE_CODE_REMOTE" != "true" ]; then
@@ -218,7 +218,9 @@ if [ -n "$CLAUDE_ENV_FILE" ]; then
 fi
 ```
 
-上記の設定がされているリポジトリにPushして、Claude Code on the Webでそのリポジトリを開けば、セッション開始時に自動でghがインストールされます。ghがインストールされている場合はスキップします。
+上記の設定がされているリポジトリにPushして、Claude Code on the Webでそのリポジトリを開けば、セッション開始時に自動で`gh`がインストールされます。`gh`がインストールされている場合はスキップします。
+
+注意点としてはサンドボックスのプロキシの設定の関係で、`gh`コマンドを使う場合は `-R owner/repo` フラグが必要です。この辺りはClaude Codeがよしなにやってくれたりしますが、CLAUDE.mdに一言書いておくとスムーズです。
 
 これにより、Claude Code on the Web上でPRの作成やissueの操作が可能になります。
 
@@ -226,14 +228,14 @@ fi
 
 ## まとめ
 
-今回は、Claude Code on the WebでGitHub CLI（gh）を使えるようにする方法を紹介しました。
+今回は、Claude Code on the WebでGitHub CLI（`gh`）を使えるようにする方法を紹介しました。
 
-- 2025年12月17日頃に`disallowed_tools`からghが削除された
+- 2025年12月17日頃に`disallowed_tools`から`gh`が削除された
 - カスタム環境で`GITHUB_TOKEN`を設定する
 - `sessionStartHooks`でghを自動インストールするスクリプトを設定
 - `CLAUDE_CODE_REMOTE`でon the Web環境を判定できる
 
-ghが使えるようになったことで、Claude Code on the Web上でissueを読んでタスクを実行などができます。また、`CLAUDE_CODE_REMOTE`を使えば他のリモートのみのワークフローにも使えると思います。この記事が参考になれば幸いです。
+`gh`が使えるようになったことで、Claude Code on the Web上でissueを読んでタスクを実行などができます。また、`CLAUDE_CODE_REMOTE`を使えば他のリモートのみのワークフローにも使えると思います。この記事が参考になれば幸いです。
 
 ## Xフォローしてくれると嬉しいです
 
