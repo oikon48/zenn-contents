@@ -10,6 +10,15 @@ published: true
 Claude Code on the Web の仕様は2026年1月8日時点です。今後`gh`コマンドがデフォルトでインストールされるといくつかの設定が不要になります。
 :::
 
+:::message
+2026/1/10
+
+ghコマンドが設定できるリポジトリを公開しました。
+
+https://github.com/oikon48/gh-setup-hooks
+
+:::
+
 Oikonです。普段はAIツール、特にClaude Codeで遊んでいます。
 
 以前、[Claude Code on the Webの仕様を徹底解剖](https://zenn.dev/oikon/articles/claude-code-web-sandbox)という記事を書きました。その中で`gh`コマンドが禁止されていることを紹介しましたが、最近の仕様変更で`gh`が`disallowed_tools`から削除され、使えるようになりました。
@@ -226,6 +235,10 @@ fi
 
 ![has gh](/images/claude-code-web-gh-cli/has-gh.png)
 
+ちなみに今回紹介したスクリプトを使った設定をGitHubで公開しました。
+
+https://github.com/oikon48/gh-setup-hooks
+
 ## まとめ
 
 今回は、Claude Code on the WebでGitHub CLI（`gh`）を使えるようにする方法を紹介しました。
@@ -236,6 +249,8 @@ fi
 - `CLAUDE_CODE_REMOTE`でon the Web環境を判定できる
 
 `gh`が使えるようになったことで、Claude Code on the Web上でissueを読んでタスクを実行などができます。また、`CLAUDE_CODE_REMOTE`を使えば他のリモートのみのワークフローにも使えると思います。この記事が参考になれば幸いです。
+
+https://github.com/oikon48/gh-setup-hooks
 
 ## Xフォローしてくれると嬉しいです
 
