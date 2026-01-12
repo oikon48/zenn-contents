@@ -13,7 +13,25 @@ Claude Code on the Web の仕様は2026年1月8日時点です。今後`gh`コ�
 :::message
 2026/1/10
 
-ghコマンドが設定できるリポジトリを公開しました。
+ghコマンドが設定できるリポジトリを公開しました。リポジトリに記載したのカスタム設定と、以下のHooksを追加することで実行できます
+
+```json:settings.json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun x gh-setup-hooks",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 https://github.com/oikon48/gh-setup-hooks
 
@@ -236,6 +254,26 @@ fi
 ![has gh](/images/claude-code-web-gh-cli/has-gh.png)
 
 ちなみに今回紹介したスクリプトを使った設定をGitHubで公開しました。
+
+リポジトリに記載したのカスタム設定と、以下のHooksを追加することで実行できます
+
+```json:settings.json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun x gh-setup-hooks",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 https://github.com/oikon48/gh-setup-hooks
 
